@@ -1,0 +1,19 @@
+@import '_global';
+@import '_vars';
+
+.app {
+  padding-top: $navbar-height;
+  background-color: $main-color;
+  width: 100%;
+  min-height: 200vh;
+
+  .home-video__container {
+    margin-top: 50px;
+    width: 100%;
+
+    .player__container {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+}

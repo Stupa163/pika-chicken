@@ -1,0 +1,27 @@
+@import '../../styles/_vars';
+
+.navbar__container {
+  opacity: .9;
+  background-color: $main-color;
+  padding: 20px 10px 20px 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $navbar-height;
+
+  .logo-left {
+    img {
+      width: 100%;
+    }
+  }
+
+  .items-right {
+    display: flex;
+
+    .item {
+      font-size: 35px;
+      padding-top: 6px;
+      margin: auto
+    }
+  }
+}
