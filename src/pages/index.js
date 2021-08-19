@@ -7,7 +7,9 @@ import ReactPlayer from "react-player";
 const IndexPage = () => {
     return (
         <div className="app">
-            <Navbar/>
+            <div style={{overflow: 'hidden'}}>
+                <Navbar style={{marginBottom: '150px'}}/>
+            </div>
             <div className="home-video__container">
                 <div className="player__container">
                     <ReactPlayer url={HomeVideo} playing={true} muted={true} loop={true} width={1000} height={500}/>

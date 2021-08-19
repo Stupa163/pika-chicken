@@ -1,27 +1,60 @@
 @import '../../styles/_vars';
 
 .navbar__container {
-  opacity: .9;
-  background-color: $main-color;
+  background-color: $secondary-color;
   padding: 20px 10px 20px 10px;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   height: $navbar-height;
 
-  .logo-left {
-    img {
-      width: 100%;
+  .navbar-content {
+    opacity: .9;
+    z-index: 100;
+
+    .logo-left {
+      img {
+        width: 100%;
+      }
+    }
+
+    .items-right {
+      display: flex;
+
+      .item {
+        font-size: 45px;
+        padding-top: 6px;
+        margin: auto
+      }
     }
   }
 
-  .items-right {
-    display: flex;
+  .curve {
+    position: absolute;
+    height: $curve-height;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
 
-    .item {
-      font-size: 35px;
-      padding-top: 6px;
-      margin: auto
+    .curve-left {
+      display: block;
+      position: absolute;
+      border-radius: 50% 100%;
+      width: 55%;
+      height: 100%;
+      background-color: $secondary-color;
+      transform: translate(-7%, 50%);
+      z-index: 2;
+    }
+
+    .curve-right {
+      display: block;
+      position: absolute;
+      border-radius: 50% 100%;
+      width: 55%;
+      height: 100%;
+      transform: translate(88%, 47%);
+      background-color: $main-color;
     }
   }
 }

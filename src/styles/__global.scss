@@ -1,3 +1,12 @@
+@import '_vars';
+
+@font-face {
+  font-family: 'Pokemon Solid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pokemon.ttf')
+}
+
 * {
   outline: none;
 }
@@ -9,4 +18,11 @@ html, body {
 
 .row {
   margin: 0;
+}
+
+.pokemon-font {
+  letter-spacing: 0.15em;
+  color: $pokemon-main-color;
+  -webkit-text-stroke: 3px $pokemon-stroke-color;
+  font-family: 'Pokemon Solid', serif;
 }
