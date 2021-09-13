@@ -2,16 +2,6 @@
 @import '_vars';
 
 .app {
-  background-color: $main-color;
   width: 100%;
-  min-height: 200vh;
-
-  .home-video__container {
-    width: 100%;
-
-    .player__container {
-      width: 1000px;
-      margin: auto;
-    }
-  }
+  min-height: 100vh;
 }

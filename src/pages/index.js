@@ -1,20 +1,14 @@
 import * as React from "react"
 import '../styles/index.scss'
 import Navbar from "../components/Navbar";
-import HomeVideo from '../videos/home.mp4';
-import ReactPlayer from "react-player";
+import ImageCover from "../components/ImageCover";
 
 const IndexPage = () => {
     return (
         <div className="app">
-            <div style={{overflow: 'hidden'}}>
-                <Navbar style={{marginBottom: '150px'}}/>
-            </div>
-            <div className="home-video__container">
-                <div className="player__container">
-                    <ReactPlayer url={HomeVideo} playing={true} muted={true} loop={true} width={1000} height={500}/>
-                </div>
-            </div>
+            <title>Pika Chicken</title>
+            <Navbar/>
+            <ImageCover/>
         </div>
     )
 }

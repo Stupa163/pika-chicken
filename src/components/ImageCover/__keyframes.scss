@@ -1,0 +1,23 @@
+@keyframes arrow-bouncing {
+  0% {
+    bottom: 75px;
+  }
+
+  100% {
+    bottom: 5px;
+  }
+}
+
+@keyframes label-sliding-in {
+  0% {
+    margin-left: -100vh;
+  }
+
+  75% {
+    margin-left: 100px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}

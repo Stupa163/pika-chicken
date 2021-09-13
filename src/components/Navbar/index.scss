@@ -1,60 +1,50 @@
 @import '../../styles/_vars';
+@import './_keyframes';
 
 .navbar__container {
-  background-color: $secondary-color;
-  padding: 20px 10px 20px 10px;
-  position: relative;
-  top: 0;
-  width: 100%;
+  position: absolute;
+  opacity: 0.75;
+  z-index: 10;
   height: $navbar-height;
+  width: 100%;
+  background-color: $main-color;
+  display: flex;
 
-  .navbar-content {
-    opacity: .9;
-    z-index: 100;
-
-    .logo-left {
-      img {
-        width: 100%;
-      }
-    }
-
-    .items-right {
-      display: flex;
-
-      .item {
-        font-size: 45px;
-        padding-top: 6px;
-        margin: auto
-      }
-    }
+  a {
+    color: $secondary-color;
+    font-weight: bold;
+    text-decoration: none;
   }
 
-  .curve {
-    position: absolute;
-    height: $curve-height;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
+  .leftPart, .rightPart {
+    width: calc((100% - #{$navbar-height}) / 2);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 45px;
+    margin-top: -$navbar-height;
+    animation: navbar-content-sliding-in $navbar-content-slide-in-time ease-in-out forwards;
+    animation-delay: $navbar-image-loading-time;
+  }
 
-    .curve-left {
-      display: block;
-      position: absolute;
-      border-radius: 50% 100%;
-      width: 55%;
-      height: 100%;
-      background-color: $secondary-color;
-      transform: translate(-7%, 50%);
-      z-index: 2;
-    }
+  .middle {
+    animation: navbar-middle-loading $navbar-middle-loading-time ease-in-out;
+    width: $navbar-height;
+    height: inherit;
+    transform: rotate(45deg);
+    margin-top: calc(#{$navbar-height / 2});
+    background-color: inherit;
 
-    .curve-right {
-      display: block;
-      position: absolute;
-      border-radius: 50% 100%;
-      width: 55%;
-      height: 100%;
-      transform: translate(88%, 47%);
-      background-color: $main-color;
+    img {
+      animation: navbar-image-loading $navbar-image-loading-time ease-in-out;
+      animation-delay: $navbar-middle-loading-time;
+      animation-fill-mode: forwards;
+      width: 0;
+      margin-top: calc(#{-$navbar-height / 10});
+      margin-left: calc(#{-$navbar-height / 10});
+      transform: rotate(-45deg);
+      opacity: 1;
     }
   }
 }

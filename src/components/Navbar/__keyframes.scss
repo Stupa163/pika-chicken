@@ -1,0 +1,37 @@
+@import '../../styles/_vars';
+
+@keyframes navbar-middle-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes navbar-image-loading {
+  0% {
+    transform: rotate(45deg);
+    width: 0;
+  }
+
+  75% {
+    width: 120%;
+  }
+
+  100% {
+    transform: rotate(-45deg);
+    width: 100%;
+  }
+}
+
+@keyframes navbar-content-sliding-in {
+  0% {
+    margin-top: -$navbar-height;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}

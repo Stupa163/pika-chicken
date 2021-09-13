@@ -1,0 +1,47 @@
+@import '../../styles/_vars';
+@import './_keyframes';
+
+.image-cover__container {
+  height: calc(100vh);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .opacity {
+    background-color: black;
+    position: absolute;
+    opacity: .3;
+    height: 100%;
+    width: 100%;
+  }
+
+  .label__container {
+    width: 50%;
+    text-align: center;
+    animation: label-sliding-in 0.5s ease-in-out;
+
+    .label {
+      font-size: 100px;
+    }
+
+    .horizontal-line {
+      border: 1px $main-color solid;
+      margin-bottom: 25px;
+    }
+
+    .location {
+      font-size: 50px;
+    }
+  }
+
+  .arrow-down__container {
+    animation: arrow-bouncing 1s ease-in-out infinite alternate;
+    position: absolute;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    bottom: 30px;
+  }
+}
